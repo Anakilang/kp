@@ -44,9 +44,9 @@ class Pelajaran_model extends CI_Model
     public $table   = 'pelajaran';
     public $id      = 'kode_mapel';
 
-    public function get_by_id($hari)
+    public function get_by_id($id)
     {
-        $this->db->where($this->hari, $hari);
+        $this->db->where($this->id, $id);
         return $this->db->get($this->table)->row();
     }
 }

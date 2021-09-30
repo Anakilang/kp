@@ -46,7 +46,7 @@ class Nilai extends CI_Controller
             $this->load->view('templates_admin/header_dashboard');
             $this->load->view('templates_admin/sidebar2');
             $this->load->view('admin/nilai', $data);
-            $this->load->view('templates_admin/footer'); 
+            $this->load->view('templates_admin/footer');
         }
     }
 
@@ -65,4 +65,64 @@ class Nilai extends CI_Controller
 
     // $array = array(5, 10, 15);
     // echo average($array); // 10
+
+    public function input_nilai()
+    {
+        $data = array(
+            'kode_mapel'        => set_value('kode_mapel'),
+            'id_thn_akademik'   => set_value('id_thn_akademik')
+        );
+
+        $this->load->view('templates_admin/header_dashboard');
+        $this->load->view('templates_admin/sidebar2');
+        $this->load->view('admin/input_nilai_form', $data);
+        $this->load->view('templates_admin/footer');
+    }
+
+    public function input_nilai_aksi()
+    {
+        $this->_rulesInputNilai();
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->input_nilai();
+        } else {
+            $kode_mapel     = $this->input->post('kode_mapel', TRUE);
+            $thn_akademik   = $this->input->post('id_thn_akademik', TRUE);
+
+            $this->db->SELECT('j.id_plj, j.nis, s.nama_lengkap, j.skor, p.nama_mapel');
+            $this->db->FROM('jadwal_pelajaran as j');
+            $this->db->join('siswa as s', 's.nis = j.nis');
+            $this->db->join('pelajaran as p', 'j.kode_mapel = p.kode_mapel');
+            $this->db->where('j.id_thn_akademik', $thn_akademik);
+            $this->db->where('j.kode_mapel', $kode_mapel);
+            $query = $this->db->get()->result();
+
+            $data = array(
+                'list_nilai'        => $query,
+                'kode_mapel'        => $kode_mapel,
+                'id_thn_akademik'   => $thn_akademik,
+            );
+
+            $this->load->view('templates_admin/header_dashboard');
+            $this->load->view('templates_admin/sidebar2');
+            $this->load->view('admin/form_nilai', $data);
+            $this->load->view('templates_admin/footer');
+        }
+    }
+
+    public function _rulesInputNilai()
+    {
+        $this->form_validation->set_rules('kode_mapel', 'Kode Mata Pelajaran', 'required');
+        $this->form_validation->set_rules('id_thn_akademik', 'ID Tahun Akademik', 'required');
+    }
+
+    public function simpan_nilai()
+    {
+        $query = array();
+        $skor   =   $_POST['skor'];
+
+        $data = array(
+            ''
+        );
+    }
 }

@@ -16,8 +16,7 @@
         <div class="form-group">
             <label>Tahun Akademik / Semester</label>
             <?php
-            $query = $this->db->query('SELECT id_thn_akademik, semester,CONCAT(tahun_akademik,"/" ) 
-            AS thn_semester FROM tahun_akademik');
+            $query = $this->db->query('SELECT id_thn_akademik, semester, CONCAT (tahun_akademik," /" )   AS thn_semester FROM tahun_akademik');
 
             $dropdowns = $query->result();
 

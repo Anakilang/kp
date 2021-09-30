@@ -36,8 +36,8 @@
                         <a class="collapse-item" href="<?php echo base_url('admin/siswa') ?>">Data Siswa</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/tahun_akademik') ?>">Tahun Akademik</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/jadwal') ?>">Jadwal Pelajaran</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/nilai/input_nilai') ?>">Input Nilai</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/nilai') ?>">Data Nilai Siswa</a>
-                        <a class="collapse-item" href="<?php echo base_url('admin/input_nilai') ?>">Input Nilai</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/guru') ?>">Guru</a>
                     </div>
                 </div>
