@@ -25,7 +25,7 @@
             </tr>
 
             <tr>
-                <td><strong>Tahun Akademik (Semester)</strong></td>
+                <td><strong>Tahun Akademik</strong></td>
                 <td>&nbsp;: <?php echo $thn_akademik ?></td>
             </tr>
 
