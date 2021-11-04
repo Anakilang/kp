@@ -9,12 +9,12 @@
             <p>Selamat Datang <strong><?php echo $username; ?></strong> di Sistem Informasi SMKS Muthia Harapan Cicalengka, anda login sebagai <strong><?php echo $level; ?></strong></p>
             <hr>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#exampleModal">
+            <!-- <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#exampleModal">
                 <i class="fas fa-sliders-h"></i> Control Panel
-            </button>
+            </button> -->
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="true">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -49,7 +49,7 @@
                                 </div>
 
                                 <div class="col-md-3 text-info text-center">
-                                    <a href="<?php echo base_url('admin/input_nilai') ?>">
+                                    <a href="<?php echo base_url('admin/nilai/input_nilai') ?>">
                                         <p class="nav-link small text-info">Input Nilai</p>
                                     </a>
                                     <i class="fas fa-3x fa-edit"></i>
@@ -58,13 +58,6 @@
                             </div>
                             <hr>
                             <div class="row">
-
-                                <div class="col-md-3 text-info text-center">
-                                    <a href="<?php echo base_url() ?>">
-                                        <p class="nav-link small text-info">Kategori</p>
-                                    </a>
-                                    <i class="fas fa-3x fa-list-ul"></i>
-                                </div>
 
                                 <div class="col-md-3 text-info text-center">
                                     <a href="<?php echo base_url() ?>">
@@ -120,5 +113,5 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>

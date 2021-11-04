@@ -38,8 +38,8 @@
 
     </center>
 
-    <!-- <?php echo anchor('admin/jadwal/tambah_nilai/' . $nis . '/' . $id_thn_akademik, '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Data Pelajaran</button>') ?> -->
-    <?php echo anchor('admin/jadwal/print', '<button class="btn btn-sm btn-info mb-3"><i class="fas fa-plus fa-sm"></i> Print</button>') ?>
+
+    <a class="btn btn-primary" href="<?php echo base_url('admin/nilai/print') ?>"> <i class="fa fa-print"></i> Print </a>
 
     <table class="table table-bordered table-hover table-striped">
         <tr>
