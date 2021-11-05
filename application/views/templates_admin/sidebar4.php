@@ -51,7 +51,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sub-menu Pengaturan:</h6>
-                        <a class="collapse-item" href="<?php echo base_url('admin/user') ?>">User</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/users') ?>">User</a>
                         <a class="collapse-item" href="utilities-border.html">Menu</a>
                     </div>
                 </div>
@@ -67,12 +67,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sub-Menu Info:</h6>
                         <a class="collapse-item" href="login.html">Identitas</a>
-                        <a class="collapse-item" href="register.html">Kategori</a>
-                        <a class="collapse-item" href="forgot-password.html">Informasi Sekolah</a>
                         <a class="collapse-item" href="404.html">Tentang Sekolah</a>
-                        <a class="collapse-item" href="blank.html">Fasilitas</a>
-                        <a class="collapse-item" href="blank.html">Materi Sekolah</a>
-                        <a class="collapse-item" href="blank.html">Gallery Sekolah</a>
                         <a class="collapse-item" href="blank.html">Kontak Kami</a>
                     </div>
                 </div>
