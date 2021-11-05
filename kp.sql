@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 17, 2021 at 08:59 PM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.7
+-- Generation Time: Nov 05, 2021 at 08:34 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `kp`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `guru`
+--
+
+CREATE TABLE `guru` (
+  `id_guru` int(11) NOT NULL,
+  `nign` varchar(50) NOT NULL,
+  `nama_guru` varchar(50) NOT NULL,
+  `alamat` varchar(50) NOT NULL,
+  `telepon` varchar(20) NOT NULL,
+  `jenis_kelamin` varchar(50) NOT NULL,
+  `photo` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `guru`
+--
+
+INSERT INTO `guru` (`id_guru`, `nign`, `nama_guru`, `alamat`, `telepon`, `jenis_kelamin`, `photo`) VALUES
+(1, '51123', 'Asep', 'Jalan Karapitan', '0822', 'Laki-laki', '');
 
 -- --------------------------------------------------------
 
@@ -41,7 +64,7 @@ CREATE TABLE `jadwal_pelajaran` (
 
 INSERT INTO `jadwal_pelajaran` (`id_plj`, `id_thn_akademik`, `nis`, `kode_mapel`, `skor`) VALUES
 (1, 1, '1', 'MK', 85),
-(2, 1, '1', 'KBD', 70),
+(2, 2, '1', 'KBD', 70),
 (3, 1, '1', 'AP', 90);
 
 -- --------------------------------------------------------
@@ -90,9 +113,7 @@ CREATE TABLE `pelajaran` (
 INSERT INTO `pelajaran` (`id_mapel`, `kode_mapel`, `nama_mapel`, `nama_jurusan`, `nama_guru`, `hari`, `jam`, `semester`) VALUES
 (1, 'MK', 'Matematika', 'Managemen', 'Asep', 'Senin', '07.00 - 09.45', 'Ganjil'),
 (2, 'AP', 'Algoritma dan Pemrograman', 'Managemen', 'Dadang', '', '', 'Genap'),
-(3, 'tes', 'tes', 'Managemen', 'tes', '', '', 'Genap'),
-(4, 'tese', 'teset', 'Managemen', 'asd', '', '', 'Ganjil'),
-(5, 'KBD', 'Keamanan Basis Data', 'Manajemen', 'Asep', 'Senin', '07.00 - 09.45', 'Ganjil');
+(3, 'KBD', 'Keamanan Basis Data', 'Manajemen', 'Asep', 'Selasa', '07.00 - 09.45', 'Ganjil');
 
 -- --------------------------------------------------------
 
@@ -120,10 +141,10 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`id`, `nis`, `nama_lengkap`, `nama_jurusan`, `jenis_kelamin`, `tempat_lahir`, `alamat`, `email`, `telepon`, `tanggal_lahir`, `tahun_akademik`, `photo`) VALUES
-(1, '1', 'Wira', 'Manajemen', 'Laki-laki', 'Bandung', 'Bandung', 'wiraswasta@gmail.com', '0212331', '2003-02-01', '2019/2020', '1.jpg'),
-(2, '2', 'tes', 'Manajemen', 'Laki-laki', 'Subang', 'Jalann', 'adwa@gmail.com', '9202', '2002-01-01', '2019/2020', ''),
-(3, '2211', 'aa', 'Manajemen', 'Laki-laki', 'da', 'ada', 'adada', '022', '2000-02-01', '2019/2020', ''),
-(4, '1231', 'adwa', 'Manajemen', 'Laki-laki', 'Bandung', 'dad', 'addaw', '13231', '2006-05-09', '2019/2020', '');
+(1, '1', 'Wira', 'Manajemen', 'Laki-laki', 'Bandung', 'Bandung', 'wiraswasta@gmail.com', '0212331', '2003-02-01', '2019-2020', '1.jpg'),
+(2, '2', 'tes', 'Manajemen', 'Laki-laki', 'Subang', 'Jalann', 'adwa@gmail.com', '9202', '2002-01-01', '2019-2020', ''),
+(3, '2211', 'aa', 'Manajemen', 'Laki-laki', 'da', 'ada', 'adada', '022', '2000-02-01', '2019-2020', ''),
+(4, '1231', 'adwa', 'Manajemen', 'Laki-laki', 'Bandung', 'dad', 'addaw', '13231', '2006-05-09', '2019-2020', '');
 
 -- --------------------------------------------------------
 
@@ -143,9 +164,9 @@ CREATE TABLE `tahun_akademik` (
 --
 
 INSERT INTO `tahun_akademik` (`id_thn_akademik`, `tahun_akademik`, `semester`, `status`) VALUES
-(1, '2019/2020', 'Ganjil', 'Aktif'),
-(2, '2020/2021', 'Genap', 'Aktif'),
-(3, '2021/2022', 'Ganjil', 'Aktif');
+(1, '2019-2020', 'Genap', 'Aktif'),
+(2, '2019-2020', 'Ganjil', 'Aktif'),
+(3, '2020-2021', 'Genap', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -167,12 +188,19 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `level`, `blokir`, `id_session`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 'N', ''),
-(2, 'aria', '81dc9bdb52d04dc20036dbd8313ed055', 'admin', 'N', '');
+(1, 'admin', '81dc9bdb52d04dc20036dbd8313ed055', 'admin', 'N', ''),
+(2, 'aria', '81dc9bdb52d04dc20036dbd8313ed055', 'admin', 'N', ''),
+(3, 'user', '81dc9bdb52d04dc20036dbd8313ed055', 'user', 'N', 'd41d8cd98f00b204e9800998ecf8427e');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `guru`
+--
+ALTER TABLE `guru`
+  ADD PRIMARY KEY (`id_guru`);
 
 --
 -- Indexes for table `jadwal_pelajaran`
@@ -219,6 +247,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `guru`
+--
+ALTER TABLE `guru`
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `jadwal_pelajaran`
 --
 ALTER TABLE `jadwal_pelajaran`
@@ -228,7 +262,7 @@ ALTER TABLE `jadwal_pelajaran`
 -- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
-  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `pelajaran`
@@ -252,7 +286,7 @@ ALTER TABLE `tahun_akademik`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
