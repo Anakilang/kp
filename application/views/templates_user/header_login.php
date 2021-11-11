@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <link rel="icon" type="img/png" href="<?php echo base_url() ?>bootstrap4/img/logo2.png">
-    <title>Login Admin</title>
+    <title>Login</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url() ?>bootstrap4/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

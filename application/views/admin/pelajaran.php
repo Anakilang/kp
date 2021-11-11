@@ -17,7 +17,7 @@
             <th>NAMA JURUSAN</th>
             <th>HARI</th>
             <th>JAM</th>
-            <th colspan="3">AKSI</th>
+            <th class="text-center" colspan="3">AKSI</th>
         </tr>
 
         <?php $no = 1;

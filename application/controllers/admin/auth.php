@@ -50,26 +50,21 @@ class Auth extends CI_Controller
                 }
                 if ($sess_data['level'] == 'admin') {
                     redirect('admin/dashboard');
+                } elseif ($sess_data['level'] == 'user') {
+                    redirect('user/dashboard');
                 } else {
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        Anda bukan admin
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>');
-                    redirect('admin/auth');
-                }
-            } else {
-                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                     User atau Password anda salah!
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 </div>');
-                redirect('admin/auth');
+                    redirect('admin/auth');
+                }
             }
         }
     }
+
     public function logout()
     {
         $this->session->sess_destroy();

@@ -6,15 +6,11 @@
 
     <?php echo $this->session->flashdata('pesan') ?>
 
-    <?php echo anchor('admin/jurusan2/input', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Jurusan</button>') ?>
-
-
     <table class="table table-bordered table-striped table-hover">
         <tr>
             <th>NO</th>
             <th>KODE JURUSAN</th>
             <th>NAMA JURUSAN</th>
-            <th class="text-center" colspan="2">AKSI</th>
         </tr>
 
         <?php $no = 1;
@@ -23,10 +19,6 @@
                 <td><?php echo $no++ ?></td>
                 <td><?php echo $jrs->kode_jurusan ?></td>
                 <td><?php echo $jrs->nama_jurusan ?></td>
-                <td width="20px"><?php echo anchor('admin/jurusan2/update/' . $jrs->id_jurusan, '<div class="btn btn-primary"><i class="fa fa-edit"></i></div>') ?>
-                </td>
-                <td width="20px"><?php echo anchor('admin/jurusan2/delete/' . $jrs->id_jurusan, '<div class="btn btn-danger"><i class="fa fa-trash"></i></div>') ?>
-                </td>
             </tr>
         <?php endforeach; ?>
 
