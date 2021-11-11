@@ -14,7 +14,7 @@
             <th>TAHUN AKADEMIK</th>
             <th>SEMESTER</th>
             <th>STATUS</th>
-            <th colspan="2">AKSI</th>
+            <th class="text-center" colspan="2">AKSI</th>
         </tr>
 
         <?php
