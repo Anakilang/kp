@@ -46,7 +46,7 @@
         <?php endforeach; ?>
     </table>
 
-    <?php echo anchor('admin/pelajaran', '<div class="btn btn-sm btn-primary">Kembali</div>') ?> <br>
+    <?php echo anchor('user/pelajaran', '<div class="btn btn-sm btn-primary">Kembali</div>') ?> <br>
     <br>
     <br>
     <br>

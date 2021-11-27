@@ -6,7 +6,6 @@
 
     <?php echo $this->session->flashdata('pesan') ?>
 
-    <?php echo anchor('admin/siswa/tambah_siswa', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Siswa</button>') ?>
 
 
     <table class="table table-striped table-hover table-bordered">
@@ -32,9 +31,7 @@
                 <td><?php echo $sis->jenis_kelamin ?></td>
                 <!-- <td><?php echo $sis->jurusan ?></td> -->
                 <td><?php echo $sis->email ?></td>
-                <td width="20px"><?php echo anchor('admin/siswa/detail/' . $sis->id, '<div class="btn btn-info"><i class="fa fa-eye"></i></div>') ?> </td>
-                <td width="20px"><?php echo anchor('admin/siswa/update/' . $sis->id, '<div class="btn btn-primary"><i class="fa fa-edit"></i></div>') ?> </td>
-                <td width="20px"><?php echo anchor('admin/siswa/delete/' . $sis->id, '<div class="btn btn-danger"><i class="fa fa-trash"></i></div>') ?> </td>
+                <td width="20px"><?php echo anchor('user/siswa/detail/' . $sis->id, '<div class="btn btn-info"><i class="fa fa-eye"></i></div>') ?> </td>
             </tr>
 
         <?php endforeach; ?>

@@ -17,15 +17,12 @@
                 <li><a href="<?php echo base_url('jurusan') ?>">Jurusan</a></li>
                 <li><a href="<?php echo base_url('fasilitas') ?>">Fasilitas</a></li>
                 <li class="active"><a href="<?php echo base_url('pengajar') ?>">Tenaga Pengajar</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <i class="fa fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="<?php echo base_url('ekstra') ?>">Extrakulikuler</a></li>
-                        <li><a href="<?php echo base_url('kegiatan') ?>">Kegiatan Belajar</a></li>
-                        <li><a href="<?php echo base_url('lomba') ?>">Perlombaan</a></li>
-                    </ul>
-                </li>
+                <li><a href="<?php echo base_url('dokumentasi') ?>">Dokumentasi</a></li>
+                <!-- <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <i class="fa fa-angle-down"></i></a>
+                    </li> -->
                 <li><a href="<?php echo base_url('about') ?>">Tentang Sekolah</a></li>
+                <li><a href="<?php echo base_url('admin/auth') ?>">Login Akademik</a></li>
             </ul>
         </div>
     </div>
