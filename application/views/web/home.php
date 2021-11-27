@@ -17,21 +17,16 @@
 
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="<?php echo base_url('home') ?>">Home</a>
-                    </li>
+                    <li class="active"><a href="<?php echo base_url('home') ?>">Home</a></li>
                     <li><a href="<?php echo base_url('jurusan') ?>">Jurusan</a></li>
                     <li><a href="<?php echo base_url('fasilitas') ?>">Fasilitas</a></li>
                     <li><a href="<?php echo base_url('pengajar') ?>">Tenaga Pengajar</a></li>
-                    <li class="dropdown">
+                    <li><a href="<?php echo base_url('dokumentasi') ?>">Dokumentasi</a></li>
+                    <!-- <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="<?php echo base_url('ekstra') ?>">Extrakulikuler</a></li>
-                            <li><a href="<?php echo base_url('kegiatan') ?>">Kegiatan Belajar</a></li>
-                            <li><a href="<?php echo base_url('lomba') ?>">Perlombaan</a></li>
-                        </ul>
-                    </li>
+                    </li> -->
                     <li><a href="<?php echo base_url('about') ?>">Tentang Sekolah</a></li>
+                    <li><a href="<?php echo base_url('admin/auth') ?>">Login Akademik</a></li>
                 </ul>
             </div>
         </div>
@@ -49,66 +44,14 @@
             <div class="carousel-inner">
 
                 <div class="item active" style="background-image: url(bootstrap4/img/slider/gedung.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="<?php echo base_url() ?>bootstrap4/img/slider/img1.png" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
                 </div>
                 <!--/.item-->
 
                 <div class="item" style="background-image: url(bootstrap4/img/slider/rpl.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="<?php echo base_url() ?>bootstrap4/img/slider/img2.png" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
                 </div>
                 <!--/.item-->
 
                 <div class="item" style="background-image: url(bootstrap4/img/slider/rpl2.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="<?php echo base_url() ?>bootstrap4/img/slider/img3.png" class="img-responsive">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <!--/.item-->
             </div>

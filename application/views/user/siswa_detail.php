@@ -63,6 +63,6 @@
         <?php endforeach; ?>
     </table>
 
-    <?php echo anchor('admin/siswa', '<div class="btn btn-sm btn-primary">Kembali</div>') ?> <br><br><br><br>
+    <?php echo anchor('user/siswa', '<div class="btn btn-sm btn-primary">Kembali</div>') ?> <br><br><br><br>
 
 </div>
